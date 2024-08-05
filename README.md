@@ -25,6 +25,7 @@ This enhanced version supports calling built-in functions, provides more flexibl
    - Target Type: Choose between Parent, Self, or Scene.
    - Loop: Enable if you want the function to be called repeatedly.
    - Loop Interval: Set how often the looped function should be called (e.g., every 2 times, every 3 times, etc.).
+   - Trigger Type: Select how when you want the function to execute During or After Animation
 
 ## Use Cases and Examples
 
@@ -58,11 +59,12 @@ func spawn_particles(particle_scene: PackedScene, offset: Vector2):
 
 # In SuperSprite2D Inspector:
 # Set up an AnimationFunction:
-# - Animation Name: "attack"
+# - Animation Name: "dead"
 # - Frame: 5
 # - Function Name: "spawn_particles"
-# - Arguments: [preload("res://particles/slash.tscn"), Vector2(50, 0)]
+# - Arguments: [preload("res://particles/dead.tscn"), Vector2(50, 0)]
 # - Target Type: Self
+# - Trigger Type: After Animation
 ```
 This will spawn slash particles at a specific point in the attack animation.
 
